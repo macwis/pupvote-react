@@ -6,15 +6,15 @@ export const upvoteSlice = createSlice({
     features: [],
   },
   reducers: {
-    upVote: (state) => {
+    upVote: (state, action) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.features[id].votes += 1
+      state.features[action.payload.id].votes += 1
     },
-    downVote: (state) => {
-      state.features[id].votes -= 1
+    downVote: (state, action) => {
+      state.features[action.payload.id].votes -= 1
     },
     loadData: (state, action) => {
       state.features = action.payload

@@ -9,6 +9,7 @@ export interface FeatureType {
     id: number;
     subject: string;
     description: string;
+    votes: number,
 }
 
 export interface FeaturesType {
