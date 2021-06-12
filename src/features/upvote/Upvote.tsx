@@ -3,7 +3,7 @@ import {makeStyles, Theme, createStyles} from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import {useFeaturesLoading} from "./useFeaturesLoading";
+import { useFeaturesLoading } from "./useFeaturesLoading";
 
 import UpvoteItem from "./UpvoteItem";
 
@@ -31,8 +31,9 @@ function generate(element: React.ReactElement) {
 
 export function Upvote() {
     const classes = useStyles();
-    const [features, setFeatures] = useFeaturesLoading();
+    const isFeeaturesLoading = useFeaturesLoading();
 
+    console.log(isFeeaturesLoading);
     const up = (id: number) => {
         console.log("up vote on", id)
     }

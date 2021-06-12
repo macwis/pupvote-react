@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const upvoteSlice = createSlice({
   name: 'features-store',
   initialState: {
-    features: [],
+  features: null,
   },
   reducers: {
     upVote: (state, action) => {
@@ -11,9 +11,11 @@ export const upvoteSlice = createSlice({
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
+      // @ts-ignore
       state.features[action.payload.id].votes += 1
     },
     downVote: (state, action) => {
+      // @ts-ignore
       state.features[action.payload.id].votes -= 1
     },
     loadData: (state, action) => {
