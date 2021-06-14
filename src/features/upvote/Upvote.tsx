@@ -31,9 +31,9 @@ function generate(element: React.ReactElement) {
 
 export function Upvote() {
     const classes = useStyles();
-    const isFeeaturesLoading = useFeaturesLoading();
+    const isFeaturesLoading = useFeaturesLoading();
 
-    console.log(isFeeaturesLoading);
+    console.log(isFeaturesLoading);
     const up = (id: number) => {
         console.log("up vote on", id)
     }
